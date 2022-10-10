@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      background-image: url(https://burst.shopifycdn.com/photos/beach-at-sunset-in-teal-and-orange.jpg?width=1200&format=pjpg&exif=1&iptc=1);
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 500px;
+      margin: auto;
+    "
+  >
+    <h1><b>Registracija korisnika</b></h1>
+    <p><b>Unesite sve podatke kako biste se registrirali</b></p>
+    <hr/>
+    <form action method="post">
+      <label for="img">Učitaj sliku svog auta</label><br />
+      <input type="file" name="slika" id="slika" accept=".jpg" /><br />
+
+      <label for="fname">Ime:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Prezime:</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <div>
+        <p>Imate li 18 godina?</p>
+        <input type="radio" id="DA" name="18 godina" value="DA" />
+        <label for="DA">DA</label><br />
+        <input type="radio" id="NE" name="18 godina" value="NE" />
+        <label for="NE">NE</label><br />
+        <input type="submit" value="Potvrdi" />
+      </div>
+
+      <p>Unesite datum rođenja:</p>
+      <label for="start">Rođen sam:</label>
+
+      <input
+        type="date"
+        id="start"
+        name="trip-start"
+        value="2004-10-09"
+        min="2004-10-09"
+        max="2022-10-09"
+      /><br />
+      <label for="username">Korisničko ime:</label><br />
+      <input type="text" id="username" name="Korisničko ime" /><br />
+      <label for="pwd">Šifra:</label><br />
+      <input
+        type="password"
+        id="pwd"
+        name="Šifra"
+        placeholder="Koristiti velika i mala slova"
+      />
+
+      <p>Za koji auto ste zainteresirani?</p>
+      <input
+        type="checkbox"
+        id="Auto1"
+        name="Alfa Romeo 159"
+        value="Alfa Romeo 159"
+      />
+      <label for="Auto1"> Alfa Romeo 159</label><br />
+      <input
+        type="checkbox"
+        id="Auto2"
+        name="Alfa Romeo Stelvio"
+        value="Alfa Romeo Stelvio"
+      />
+      <label for="Auto2"> Alfa Romeo Stelvio</label><br />
+      <input
+        type="checkbox"
+        id="Auto3"
+        name="Alfa romeo 147 gta"
+        value="Alfa romeo 147 gta"
+      />
+      <label for="Auto3"> Alfa romeo 147 gta</label>
+
+      <p>
+        Molimo Vas da ostavite svoje podatke kako bismo Vas mogli kontaktirati.
+      </p>
+      <hr/>
+
+      <label for="email">E-mail:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <label for="tel">Broj telefona/mobitela:</label><br />
+      <input type="tel" id="tel" name="tel" />
+
+      <p>Koliko Vam se puta pokvario auto?</p>
+      <label for="vol">Izaberite od 1 do 100:</label><br />
+      <input
+        type="range"
+        name="rangeInput"
+        min="0"
+        max="100"
+        onchange="updateTextInput(this.value);"
+      /><br />
+      <input type="text" id="textInput" value="" />
+    </form>
+    <p>
+      U slučaju kvara prije kupnje novog automobila, ostavljamo Vam kontakte.
+    </p>
+    <hr/>
+
+    <a
+      href="https://motointegrator.com/hr/hr/autoservisi/grad-zagreb/marka-2-alfa-romeo"
+      >Popravak Alfe</a
+    >
+    <hr>
+    <input type="submit" value="Registriraj se" />
+
+  </body>
+</html>
+<script>
+  function updateTextInput(val) {
+    document.getElementById("textInput").value = val;
+  }
+</script>
