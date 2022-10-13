@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: bisque">
+    <h1>Povrat kupljene robe</h1>
+    <p>Ovdje opišite zbog čega vraćate proizvod:</p>
+    <textarea name="message" rows="5" cols="50"> </textarea>
+    <br />
+
+    <form action="#" method="get" oninput="x.value=parseInt(ukupno.value) - parseInt (cijena.value) + 'kn'">
+      <label for="odabir">Koji artikl vraćate:</label><br />
+      <select name="voce" id="voce" multiple>
+        <optgroup label="Voce">
+          <option value="Jabuke">Jabuke</option>
+          <option value="Kruške">Kruške</option>
+          <option value="Šljive">Šljive</option>
+        </optgroup>
+        <optgroup label="Povrće">
+          <option value="Mrkva">Mrkva</option>
+          <option value="Kupus">Kupus</option>
+          <option value="Paparika">Paprika</option>
+        </optgroup>
+        <br />
+      </select>
+      <br />
+
+      <label for="trgovina">U koju poslovnicu ćete dostaviti artikl?</label>
+      <input list="trgovina" />
+
+      <datalist id="trgovina">
+        <option value="Špansko"></option>
+        <option value="Vrapče"></option>
+        <option value="Kruge"></option>
+        <option value="Ravnice"></option>
+        <option value="Perjavica"></option>
+      </datalist>
+      <br />
+      
+      <fieldset style="width: 200px">
+        <legend>Vaši podaci:</legend>
+        <label for="fname"> Ime:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Prezime:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="oib">OIB</label>
+        <input type="text" id="oib" name="oib" /><br /><br />
+      </fieldset>
+
+      <label for="cijena">Cijena artikla:</label>
+      <input
+        id="cijena"
+        name="cijena"
+        type="range"
+        min="5"
+        max="150"
+        value="100"
+        onchange="updateTextInput(this.value)"
+      />
+      <br />
+
+      <label for="iznos">Iznos:</label>
+      <output type="text" id="txtIznos" value=""></output> 
+      <br />
+
+      <label for="ukupno">Ukupan iznos računa:</label>
+      <input
+        id="ukupno"
+        name="ukupno"
+        type="number"
+        min="3"
+        max="150"
+        value="100"
+      />    
+      <br />
+      <label>Iznos za vratiti:</label>
+      <output name="x" for="ukupno-cijena"></output><br/>
+      <button type="button" onclick="alert('Vraćen iznos')">Vrati iznos</button>
+    </form>
+  </body>
+</html>
+
+<script>
+  function updateTextInput(val) {
+    document.getElementById("txtIznos").value = val + 'kn';
+  }
+</script>

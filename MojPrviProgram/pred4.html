@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predavanje 4</title>
+</head>
+<body>
+    <!--Multimedija grafika-->
+    <img width="300" 
+    src="https://thumbs.dreamstime.com/b/happy-student-thumbs-up-classroom-looking-you-classmates-background-96531919.jpg">
+    
+ <!-- Forme - nastavak -->
+ <form
+ action="#"
+ method="get"
+ oninput='bonus.value=parseInt(parseInt(placa.value)*0.2).toString() + "kn"'
+>
+ <label for="post">Unesite sadržaj svog posta:</label><br />
+ <textarea id="post" name="post" rows="10" cols="200">
+Upisite svoj post</textarea
+ >
+
+ <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+ <fieldset>
+   <legend>Osobni podatci:</legend>
+   <label for="fname">First name:</label><br />
+   <input type="text" id="fname" name="fname" value="John" /><br />
+   <label for="lname">Last name:</label><br />
+   <input type="text" id="lname" name="lname" value="Doe" /><br />
+ </fieldset>
+ <fieldset>
+   <legend>glasacke preferencije:</legend>
+   <label for="fname">Tko ce biti predsjednik:</label><br />
+   <input type="text" id="fname" name="fname" value="John" /><br />
+   <label for="lname">Tko ce biti predsjednik vlade:</label><br />
+   <input type="text" id="lname" name="lname" value="Doe" /><br />
+ </fieldset>
+
+ <br /><br /><br />
+
+ <div style="border: 1px solid black; padding: 10px; position: relative">
+   <span style="position: absolute; background-color: white; top: -10px"
+     >Naslov grupe inputa</span
+   >
+   <label for="fname">First name:</label><br />
+   <input type="text" id="fname" name="fname" value="John" /><br />
+   <label for="lname">Last name:</label><br />
+   <input type="text" id="lname" name="lname" value="Doe" /><br />
+ </div>
+ <br />
+
+ <label for="polaznici">Odaberite polaznika iz liste</label>
+ <input list="polaznici" name="polaznik" />
+ <datalist id="polaznici">
+   <option value="Miscevic"></option>
+   <option value="Blazic"></option>
+   <option value="Validzic"></option>
+   <option value="Lenzovich"></option>
+   <option value="Kukulj"></option>
+ </datalist>
+
+ <br /><br />
+ <label for="placa">Odaberite iznos godišnje paće:</label>
+ <input
+   id="placa"
+   name="placa"
+   type="range"
+   min="100000"
+   max="1000000"
+   value="500000"
+ /><br />
+ <label for="bonus">Predviđeni bonus za potpisivanje ugovora:</label>
+ <output name="bonus" for="placa">100000</output>
+</form>
+</body>
+</html>
